@@ -1,0 +1,33 @@
+{
+  "content_scripts": [
+    {
+      "js": [
+        "addPinboard.js",
+        "getSelection.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ]
+    }
+  ],
+  "name": "pinboard-fu",
+  "version": "0.0.1",
+  "description": "Quick access to saving Pinboard bookmarks. Customizable keyboard shortcut. Selected text populates your description field.",
+  "icons" : {
+    "48": "pinboard48.png",
+    "128": "pinboard128.png"
+  },
+  "options_page": "options_shortcut.html",
+  "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+  "browser_action": {
+    "default_title": "Post to Pinboard",
+    "default_icon": "pinboard.png",
+    "popup": "popup.html"
+  },
+  "background_page": "background.html"
+}
