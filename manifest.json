@@ -12,7 +12,7 @@
     }
   ],
   "name": "pinboard-fu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Quick access to saving Pinboard bookmarks. Customizable keyboard shortcut. Selected text populates your description field.",
   "icons" : {
     "48": "pinboard48.png",
