@@ -2,9 +2,9 @@
 
 ## Description
 
-Google Chrome Extention for pinboard.in which helps to bookmark.
+A Google Chrome Extention for pinboard.in which helps to bookmark easily.
 
-Port of https://github.com/billkeller/Delicious-Chrome-Extension from delicious to pinboard.
+This is a port of https://github.com/billkeller/Delicious-Chrome-Extension from delicious to pinboard.
 
 1. Bookmark with popup
 1. Available by shortcut key (eg: Alt-D)
