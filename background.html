@@ -1,6 +1,14 @@
 <html>
 <script>
 
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+  if (changeInfo.status == "loading") {
+    if (tab.url == "https://pinboard.in/add") {
+      chrome.tabs.remove(tabId);
+    }
+  }
+});
+
 chrome.extension.onRequest.addListener(
 	function(message, sender, sendResponse) {
 		if (message.action && sender.tab) {
