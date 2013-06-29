@@ -1,4 +1,27 @@
 {
+  "manifest_version": 2,
+
+  "name": "pinboard-fu",
+  "description": "Quick access to saving Pinboard bookmarks. Customizable keyboard shortcut. Selected text populates your description field.",
+  "version": "0.1.0",
+
+  "icons" : {
+    "48": "pinboard48.png",
+    "128": "pinboard128.png"
+  },
+
+  "permissions": [
+    "tabs",
+    "http://*/",
+    "https://*/"
+  ],
+
+  "browser_action": {
+    "default_title": "Post to Pinboard",
+    "default_icon":  "pinboard.png",
+    "default_popup": "popup.html"
+  },
+
   "content_scripts": [
     {
       "js": [
@@ -11,23 +34,11 @@
       ]
     }
   ],
-  "name": "pinboard-fu",
-  "version": "0.0.3",
-  "description": "Quick access to saving Pinboard bookmarks. Customizable keyboard shortcut. Selected text populates your description field.",
-  "icons" : {
-    "48": "pinboard48.png",
-    "128": "pinboard128.png"
-  },
+
   "options_page": "options_shortcut.html",
-  "permissions": [
-    "tabs",
-    "http://*/",
-    "https://*/"
-  ],
-  "browser_action": {
-    "default_title": "Post to Pinboard",
-    "default_icon": "pinboard.png",
-    "popup": "popup.html"
-  },
-  "background_page": "background.html"
+
+  "background": {
+    "page": "background.html",
+    "persistent": false
+  }
 }
