@@ -1,1 +1,1 @@
-chrome.extension.sendRequest(window.getSelection().toString());
+chrome.runtime.sendMessage(window.getSelection().toString());

@@ -3,8 +3,8 @@ function startPopup(description) {
 };
 
 function addPinboardFromPopup(description) {
-	chrome.tabs.getSelected(null, function(tab) {
-		chrome.extension.sendRequest({
+  chrome.tabs.getSelected(null, function(tab) {
+    chrome.runtime.sendMessage({
 			type:        'addPinboard',
 			url:         tab.url,
 			title:       tab.title,
