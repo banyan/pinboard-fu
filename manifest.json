@@ -25,8 +25,8 @@
   "content_scripts": [
     {
       "js": [
-        "addPinboard.js",
-        "getSelection.js"
+        "js/addPinboard.js",
+        "js/getSelection.js"
       ],
       "matches": [
         "http://*/*",
