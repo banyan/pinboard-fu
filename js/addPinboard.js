@@ -11,7 +11,7 @@
         localSettings[variableName] = response;
       }
     }
-    chrome.extension.sendRequest({'action': 'getFromLocalStorage', 'variableName': variableName}, onResponse);
+    chrome.runtime.sendMessage({'action': 'getFromLocalStorage', 'variableName': variableName}, onResponse);
   }
 
   getVariableFromLocalStorage('bookmarkKeyChar', localSettings.bookmarkKeyChar);
@@ -46,7 +46,7 @@
       description = document.getSelection().toString();
     }
 
-    chrome.extension.sendRequest({
+    chrome.runtime.sendMessage({
       type:  'addPinboard',
       url:   url,
       title: title,

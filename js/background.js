@@ -1,6 +1,3 @@
-<html>
-<script>
-
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   if (changeInfo.status == "loading") {
     if (tab.url == "https://pinboard.in/add") {
@@ -9,7 +6,7 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   }
 });
 
-chrome.extension.onRequest.addListener(
+chrome.extension.onMessage.addListener(
 function(message, sender, sendResponse) {
   if (message.action && sender.tab) {
     switch (message.action) {
@@ -28,13 +25,13 @@ function getSelection(callback) {
   selection_callbacks.push(callback);
   chrome.tabs.executeScript(null, { file: "getSelection.js" });
 };
-chrome.extension.onRequest.addListener(function (request) {
+chrome.extension.onMessage.addListener(function (request) {
   var callback = selection_callbacks.shift();
   callback(request);
 });
 
 (function() {
-  chrome.extension.onRequest.addListener(
+  chrome.extension.onMessage.addListener(
     function(request, sender, sendResponse) {
       if (request.type === 'addPinboard') {
         addPinboard(request);
@@ -72,5 +69,3 @@ chrome.extension.onRequest.addListener(function (request) {
     });
   };
 })();
-</script>
-</html>
