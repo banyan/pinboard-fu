@@ -34,11 +34,8 @@
       window.addEventListener(
         'keydown',
         (e) => {
-          // Check for Alt+D, including special case for delta symbol (∂)
           if (
-            (e.key.toUpperCase() === localSettings.bookmarkKeyChar ||
-              e.key === '∂' || // Delta symbol that appears when pressing Alt+D on some keyboards
-              e.code === 'KeyD') && // D key code using standard code property
+            e.code === 'Key' + localSettings.bookmarkKeyChar &&
             ((localSettings.bookmarkSpecialKey === 'alt' && e.altKey) ||
               (localSettings.bookmarkSpecialKey === 'ctrl' && e.ctrlKey) ||
               (localSettings.bookmarkSpecialKey === 'meta' && e.metaKey))
