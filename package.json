@@ -1,0 +1,12 @@
+{
+  "name": "pinboard-fu",
+  "license": "MIT",
+  "scripts": {
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check --write ."
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4"
+  }
+}
