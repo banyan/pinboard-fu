@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "pinboard-fu",
   "description": "Quick access to saving Pinboard bookmarks. Customizable keyboard shortcut. Selected text populates your description field.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "icons": {
     "48": "assets/pinboard48.png",
     "128": "assets/pinboard128.png"
