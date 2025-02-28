@@ -2,10 +2,14 @@
 
 ## Changelog
 
-### 0.1.0 (29 June 2013)
+### 0.2.0 (2025-03-01)
 
-* Migrate to Manifest version2.
- * From January 2014, [Chrome will stop running manifest version 1](http://developer.chrome.com/extensions/manifestVersion.html#manifest-v1-support-schedule), so **please update [from Chrome Web Store](https://chrome.google.com/webstore/detail/ggaonngfgojmeifboajphnhkkhgfefpb) if your version is under 0.1.0**.
+* Migrate to Manifest V3
+
+### 0.1.0 (2013-06-29)
+
+* Migrate to Manifest V2
+ * From January 2014, [Chrome will stop running Manifest V1](http://developer.chrome.com/extensions/manifestVersion.html#manifest-v1-support-schedule), so **please update [from Chrome Web Store](https://chrome.google.com/webstore/detail/ggaonngfgojmeifboajphnhkkhgfefpb) if your version is under 0.1.0**.
 
 ## Description
 
